@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const App : FC = () => {
     return (
         <View style={style.container}>
-            <Text>HOMESCREEN</Text>
+            <Text>LoginScreen</Text>
         </View>
     );
 }
