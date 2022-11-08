@@ -9,15 +9,11 @@
  */
 
 import React from 'react';
-import { Text, View } from 'react-native';
+import MainNav from './src/navigation/mainNavigator';
 
-const App = () => {
+export default function App() {
   return (
-    <View>
-      <Text>DSD</Text>
-    </View>
-
-  );
+    <MainNav />
+     );
 };
 
-export default App;
