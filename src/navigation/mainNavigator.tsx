@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { NavigationContainer } from '@react-navigation/native';
-import AppStack from './appstack';
-import AuthStack from './authstack';
+import AppStack from "./AppStack";
+import AuthStack from "./AuthStack";
 
 const MainNav: FC = () => {
     const [user, setUser] = useState(null);
@@ -14,7 +14,7 @@ const MainNav: FC = () => {
     // }
     return (
         <NavigationContainer>
-            {!user ? <AppStack /> : <AuthStack />}
+            {user ? <AppStack /> : <AuthStack />}
         </NavigationContainer>
     );
 }

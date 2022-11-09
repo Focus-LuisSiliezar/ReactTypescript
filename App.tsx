@@ -9,7 +9,7 @@
  */
 
 import React from 'react';
-import MainNav from './src/navigation/mainNavigator';
+import MainNav from './src/navigation/MainNavigator';
 
 export default function App() {
   return (

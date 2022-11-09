@@ -5,8 +5,17 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const { Navigator, Screen } = createNativeStackNavigator();
 const AuthStack: FC = () => {
     return (
-        <Navigator>
-            <Screen name="signup" component={SignUp} />
+        <Navigator
+            screenOptions={{
+                headerStyle: { backgroundColor: '#222f3e' },
+                headerShown: false,
+                headerShadowVisible: false,
+                contentStyle: {
+                    backgroundColor: '#222f3e',
+                }
+            }}
+        >
+            <Screen name="SignUp" component={SignUp} />
             <Screen name="Login" component={Login} />
         </Navigator>
     );

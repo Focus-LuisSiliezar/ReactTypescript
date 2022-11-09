@@ -1,5 +1,5 @@
-import Home from "./home";
-import Login from "./login";
-import SignUp from "./signup";
-import Dashboard from "./dashboard";
+import Home from "./Home";
+import Login from "./Login";
+import SignUp from "./SignUp";
+import Dashboard from "./Dashboard";
 export { Home, Login, SignUp, Dashboard };
