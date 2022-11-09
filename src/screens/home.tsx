@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { ScreenDimensions } from '../components';
 
 const Home: FC = () => {
     return (
-        <View style={style.container}>
-            <Text>Netflix</Text>
-        </View>
+       <ScreenDimensions>
+
+       </ScreenDimensions>
     );
 }
 export default Home;
