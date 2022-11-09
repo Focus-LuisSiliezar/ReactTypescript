@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { ScreenDimensions } from '../components';
+import { MovieList } from '../lists';
 
 const Home: FC = () => {
     return (
-       <ScreenDimensions>
-
-       </ScreenDimensions>
+        <ScreenDimensions>
+            <MovieList />
+        </ScreenDimensions>
     );
 }
 export default Home;
