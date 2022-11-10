@@ -1,13 +1,18 @@
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
+import { DrawerActions, NavigationContainer } from '@react-navigation/native';
+import { Pressable } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Details, Favorites, Home, Splash } from "../screens";
-import { HeaderImage } from "../components";
+import { HeaderImage, IconButton } from "../components";
+import Icon from 'react-native-remix-icon';
 
 const Navigator = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
-const DrawerMenu: React.FC = () => {
+interface Props {
+    navigation: any;
+}
+const DrawerMenu: React.FC<Props> = ({ navigation }) => {
     return (
         <Drawer.Navigator
             screenOptions={{
@@ -19,14 +24,19 @@ const DrawerMenu: React.FC = () => {
                 drawerContentStyle: { backgroundColor: '#111111' },
                 drawerInactiveTintColor: 'white',
                 drawerActiveTintColor: 'white',
-                drawerActiveBackgroundColor: '#831010'
+                drawerActiveBackgroundColor: '#831010',
+                headerLeft: () => <IconButton iconName="ri-menu-line" onPress={() => { navigation.dispatch(DrawerActions.toggleDrawer()) }} iconColor="white" iconStyle={{ paddingLeft: 5 }} />,
             }}
         >
-            <Drawer.Screen name="Home" component={Home} options={{ headerTitle: () => <HeaderImage />, }} />
+            <Drawer.Screen name="Home" component={Home} options={{
+                headerTitle: () => <HeaderImage />,
+                headerRight: () => <IconButton iconName="ri-search-line" onPress={() => { navigation.navigate('Favorites') }} iconColor="white" iconStyle={{paddingRight:5}}/>,
+                drawerIcon: () => <Icon name="ri-home-line" size='18' color="white" />,
+            }} />
 
-            <Drawer.Screen name='FavoritesScreen' component={Favorites} options={{
+            <Drawer.Screen name='Favorites' component={Favorites} options={{
                 title: 'Favorites',
-                // drawerIcon: ({ color }) => <Feather name='home' color={color} size={18} />
+                drawerIcon: ({ color }) => <Icon name="ri-star-line" size='18' color="white" />
             }} />
 
         </Drawer.Navigator>

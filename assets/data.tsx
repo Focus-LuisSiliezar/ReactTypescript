@@ -26,7 +26,7 @@ const MOVIES = [
     },
     {
         'id': '4',
-        'movieLink': 'https://www.reeldeals.com/Images/HomeImages/37705.jpg',
+        'movieLink': 'https://cdn.shopify.com/s/files/1/0057/3728/3618/products/dune_fzj9yoaw_480x.progressive.jpg?v=1629748148',
         'title': 'Dune',
         'overview': 'This is the overview for the movie that we are currently watching',
         'release-date': '1999-10-10',

@@ -1,4 +1,3 @@
-import { useFocusEffect } from '@react-navigation/native';
 import React from 'react';
 import { Text } from 'react-native';
 import { ScreenDimensions } from '../components';
@@ -8,13 +7,6 @@ interface Props {
     navigation: any,
 }
 const Home: React.FC<Props> = ({ navigation }) => {
-
-    useFocusEffect(() => {
-        navigation.setOptions({
-            // headerLeft: () => <Text style={{ color: 'white' }}>drawer</Text>,
-            headerRight: () => <Text style={{ color: 'white' }}>go to search</Text>
-        });
-    });
 
     return (
         <ScreenDimensions>
