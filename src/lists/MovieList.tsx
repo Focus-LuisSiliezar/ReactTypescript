@@ -1,10 +1,11 @@
 import React from 'react';
-import { FlatList, View } from 'react-native'
+import { FlatList, View, Pressable } from 'react-native'
 import { MovieItem } from '../components';
+
 const MOVIES = [
     {
         'id': '1',
-        'movieLink': 'https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg'
+        'movieLink': 'http://photos1.blogger.com/x/blogger/4718/1605/1600/392061/poster%20nacho.jpg'
     },
     {
         'id': '2',
@@ -20,11 +21,11 @@ const MOVIES = [
     },
     {
         'id': '5',
-    'movieLink': 'https://i.ebayimg.com/images/g/3S8AAOSwAQpfjVRI/s-l500.jpg'
+        'movieLink': 'https://i.ebayimg.com/images/g/3S8AAOSwAQpfjVRI/s-l500.jpg'
     },
     {
         'id': '6',
-        'movieLink': 'https://cdn.shopify.com/s/files/1/0608/8264/9321/files/blade_runner_2049_17_u.jpg?v=1637179276'
+        'movieLink': 'https://assets.mubicdn.net/images/notebook/post_images/31857/images-w1400.jpg?1607290863'
     },
     {
         'id': '7',
@@ -43,12 +44,16 @@ const MOVIES = [
         'movieLink': 'https://creativereview.imgix.net/content/uploads/2018/12/Unknown-5.jpeg?auto=compress,format&q=60&w=2024&h=3000'
     },
 ];
-const renderItem = ({ item }: any) => (
-    <MovieItem uri={item.movieLink} onPress={() => { console.log(item.id); }} />
-);
 
+interface Props{
+    navigation: any,
+}
+const MovieList: React.FC<Props> = ({navigation}) => {
 
-const MovieList: React.FC = () => {
+    const renderItem = ({ item }: any) => (
+        <MovieItem uri={item.movieLink} onPress={() => {navigation.navigate('Details')}} />
+    );
+
     return (
         <FlatList
             numColumns={2}

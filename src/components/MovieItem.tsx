@@ -1,6 +1,5 @@
 import React from 'react';
-import { Image, View, StyleSheet } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Image, View, StyleSheet, Pressable } from 'react-native';
 
 interface Props {
     onPress: () => void,
@@ -9,7 +8,7 @@ interface Props {
 
 const MovieItem: React.FC<Props> = ({ onPress, uri }) => {
     return (
-        <TouchableOpacity onPress={onPress}>
+        <Pressable onPress={onPress} >
             <View style={style.cardContainer}>
                 <Image
                     style={style.image}
@@ -19,7 +18,7 @@ const MovieItem: React.FC<Props> = ({ onPress, uri }) => {
                     }
                 />
             </View>
-        </TouchableOpacity>
+        </Pressable>
     );
 }
 export default MovieItem;
@@ -36,6 +35,8 @@ const style = StyleSheet.create({
     image: {
         height: 250,
         width: '100%',
-
     },
+    pressed: {
+        opacity: 0.8,
+    }
 });

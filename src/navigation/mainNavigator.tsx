@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home, Splash } from "../screens";
+import { Details, Home, Splash } from "../screens";
 import { HeaderImage } from "../components";
 
 const { Navigator, Screen } = createNativeStackNavigator();
@@ -19,8 +19,9 @@ const MainNav: FC = () => {
                     }
                 }}
             >
-                <Screen name="Home" component={Home} options={{ headerTitle: () => <HeaderImage />, }} />
                 <Screen name="Splash" component={Splash} options={{ headerShown: false }} />
+                <Screen name="Home" component={Home} options={{ headerTitle: () => <HeaderImage />, }} />
+                <Screen name="Details" component={Details}  />
             </Navigator>
         </NavigationContainer>
     );
