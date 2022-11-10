@@ -10,7 +10,7 @@ interface Props {
 const RelatedMovieList: React.FC<Props> = ({ navigation }) => {
 
     const renderItem = ({ item }: any) => (
-        <RelatedMovieItem uri={item.movieLink} onPress={() => { navigation.navigate('Home'); }} />
+        <RelatedMovieItem uri={item.movieLink} onPress={() => { navigation.push('Details',{movie:item}); }} />
     );
 
     return (

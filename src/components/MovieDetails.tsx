@@ -16,7 +16,7 @@ const MovieDetails: React.FC<Props> = ({ movie }) => {
             />
             <View style={style.infoRow}>
                 <Text style={style.textColor}>{movie.title}</Text>
-                <View style={style.infoRow}>
+                <View style={style.ratingRow}>
                     <Text style={style.textColor}>Average Rating: </Text>
                     <Text style={style.textColor}>{movie.average}</Text>
                 </View>
@@ -41,7 +41,12 @@ const style = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         marginTop: 10,
-        marginBottom: 3,
+        marginBottom: 5,
+    },
+    ratingRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
     buttonRow: {
         flexDirection: "row",
@@ -50,7 +55,7 @@ const style = StyleSheet.create({
         marginTop: 15,
         marginBottom: 5,
     },
-    textColor:{
+    textColor: {
         color: 'white',
     }
 })

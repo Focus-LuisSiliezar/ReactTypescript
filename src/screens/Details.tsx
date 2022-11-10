@@ -10,7 +10,6 @@ interface Props {
 }
 const Details: React.FC<Props> = ({ navigation, route }) => {
     const { movie }: any = route.params;
-    console.log('ITEM ' + movie);
     return (
         <ScrollView>
             <ScreenDimensions>
