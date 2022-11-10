@@ -7,13 +7,13 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import MainNav from './src/navigation/MainNavigator';
 
 export default function App() {
   return (
     <MainNav />
-     );
+  );
 };
 

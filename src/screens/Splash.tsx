@@ -8,7 +8,7 @@ const Splash: React.FC = () => {
   const navigation = useNavigation();
   function SplashScreenDelay() {
     navigation.dispatch(
-      StackActions.replace('Home')
+      StackActions.replace('DrawerMenu')
     );
     console.log('Time is up');
   }
