@@ -26,15 +26,3 @@ const Splash: React.FC = () => {
 }
 
 export default Splash;
-// export default class Splash extends React.PureComponent {
-
-//   render() {
-//     return (
-//       <LottieView
-//         source={require('../../assets/lottie-splash.json')}
-//         autoPlay
-//         loop
-//       />
-//     );
-//   }
-// }

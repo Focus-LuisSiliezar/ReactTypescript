@@ -1,9 +1,24 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, ScrollView } from "react-native";
+import { ScreenDimensions, MovieDetails } from "../components";
+import { RelatedMovieList } from "../lists";
 
-const Details: React.FC = () => {
+interface Props {
+    navigation: any,
+    route: any,
+
+}
+const Details: React.FC<Props> = ({ navigation, route }) => {
+    const { movie }: any = route.params;
+    console.log('ITEM ' + movie);
     return (
-        <Text style={{ color: 'white' }}> ID </Text>
+        <ScrollView>
+            <ScreenDimensions>
+                <MovieDetails movie={movie} />
+                <RelatedMovieList navigation={navigation} />
+            </ScreenDimensions>
+        </ScrollView>
+
     );
 }
 export default Details;
