@@ -1,7 +1,7 @@
 import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
 import { Text, ScrollView } from "react-native";
-import { ScreenDimensions, MovieDetails } from "../components";
+import { ScreenDimensions, MovieDetails, IconButton } from "../components";
 import { RelatedMovieList } from "../lists";
 
 interface Props {
@@ -14,7 +14,7 @@ const Details: React.FC<Props> = ({ navigation, route }) => {
 
     useFocusEffect(() => {
         navigation.setOptions({
-            headerRight: () => <Text style={{ color: 'white' }}>add to fav </Text>
+            headerRight: () => <IconButton iconName="ri-star-line" iconColor="white" onPress={()=>{}}/>
         });
     });
 

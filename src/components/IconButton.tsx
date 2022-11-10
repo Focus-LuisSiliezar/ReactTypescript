@@ -20,6 +20,6 @@ const IconButton: React.FC<Props> = ({ onPress, iconName, iconColor, iconStyle }
 export default IconButton;
 const style = StyleSheet.create({
     icon:{
-        marginHorizontal: 15,
+        // marginHorizontal: 15,
     }
 });
