@@ -6,15 +6,9 @@ import { MovieList } from '../lists';
 const Home: FC = () => {
     return (
         <ScreenDimensions>
+            <Text style={{ color: 'white', paddingBottom: 15, marginTop: 10, fontWeight: 'bold', fontSize: 21, }}>Available Movies</Text>
             <MovieList />
         </ScreenDimensions>
     );
 }
 export default Home;
-const style = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-});

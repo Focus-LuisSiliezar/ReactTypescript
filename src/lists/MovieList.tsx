@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, View, ListRenderItem, } from 'react-native'
+import { FlatList, View } from 'react-native'
 import { MovieItem } from '../components';
 const MOVIES = [
     {
@@ -50,18 +50,18 @@ const renderItem = ({ item }: any) => (
 
 const MovieList: React.FC = () => {
     return (
+            <FlatList
+                numColumns={2}
+                contentContainerStyle={{ paddingBottom: 20 }}
+                ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+                style={{ flex: 1 }}
+                data={MOVIES}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+            />
 
-        <FlatList
-            numColumns={2}
-            contentContainerStyle={{ paddingBottom: 20 }}
-            ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
-            // showsVerticalScrollIndicator={false}
-            // showsHorizontalScrollIndicator={false}
-            style={{flex:1}}
-            data={MOVIES}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
-        />
 
     );
 
