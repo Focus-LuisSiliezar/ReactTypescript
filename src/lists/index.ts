@@ -1,3 +1,3 @@
 import MovieList from "./MovieList";
-
-export {MovieList};
+import RelatedMovieList from "./RelatedMovieList";
+export { MovieList, RelatedMovieList };
