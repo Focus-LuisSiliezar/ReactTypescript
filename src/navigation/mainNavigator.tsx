@@ -1,6 +1,5 @@
 import React from "react";
 import { DrawerActions, NavigationContainer } from '@react-navigation/native';
-import { Pressable } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Details, Favorites, Home, Search, Splash } from "../screens";

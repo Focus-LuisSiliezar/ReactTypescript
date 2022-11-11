@@ -1,15 +1,14 @@
 import React from 'react';
 import { FlatList, View } from 'react-native'
-import MOVIES from '../../assets/data';
 import { MovieItem } from '../components';
 
 interface Props {
     navigation: any,
+    movies: any,
 }
-const MovieList: React.FC<Props> = ({ navigation }) => {
-
+const MovieList: React.FC<Props> = ({ navigation,movies }) => {
     const renderItem = ({ item }: any) => (
-        <MovieItem uri={item.movieLink} onPress={() => { navigation.navigate('Details', {movie: item }) }} />
+        <MovieItem poster_path={item.poster_path} onPress={() => { navigation.navigate('Details', {movie: item }) }} />
     );
 
     return (
@@ -20,7 +19,7 @@ const MovieList: React.FC<Props> = ({ navigation }) => {
             showsVerticalScrollIndicator={false}
             showsHorizontalScrollIndicator={false}
             style={{ flex: 1 }}
-            data={MOVIES}
+            data={movies}
             renderItem={renderItem}
             keyExtractor={item => item.id}
         />

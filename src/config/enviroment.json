@@ -1,0 +1,8 @@
+{
+    "server": {
+        "login": "https://reqres.in/api/login",
+        "movies": "https://api.themoviedb.org"
+    },
+    "api_key": "cf3294eb2b7b05f700015c864710cecc",
+    "password": "cityslicka"
+}

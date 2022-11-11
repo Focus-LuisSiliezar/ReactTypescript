@@ -3,17 +3,17 @@ import { Image, View, StyleSheet, Pressable } from 'react-native';
 
 interface Props {
     onPress: () => void,
-    uri?: string,
+    poster_path?: string,
 }
 
-const RelatedMovieItem: React.FC<Props> = ({ onPress, uri }) => {
+const RelatedMovieItem: React.FC<Props> = ({ onPress, poster_path }) => {
     return (
         <Pressable onPress={onPress}>
             <View style={style.cardContainer}>
                 <Image
                     style={style.image}
                     source={
-                        uri ? { uri: uri }
+                        poster_path ? { uri: `https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${poster_path}` }
                             : require('../../assets/placeholder_image.png')
                     }
                 />

@@ -22,7 +22,7 @@ const Details: React.FC<Props> = ({ navigation, route }) => {
         <ScrollView>
             <ScreenDimensions>
                 <MovieDetails movie={movie} />
-                <RelatedMovieList navigation={navigation} />
+                <RelatedMovieList navigation={navigation}  movies={movie} />
             </ScreenDimensions>
         </ScrollView>
 
