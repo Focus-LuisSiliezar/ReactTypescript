@@ -12,7 +12,7 @@ const Home: React.FC<Props> = ({ navigation }) => {
 
     useEffect(() => {
         getPopularMovies().then(movies => {
-            setPopularMovies([]);
+            setPopularMovies(movies.results);
         }).catch(e => console.log(e));
     }, []);
 
