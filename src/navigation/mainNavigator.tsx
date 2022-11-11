@@ -44,7 +44,7 @@ const DrawerMenu: React.FC<Props> = ({ navigation }) => {
 const MainNav: React.FC = () => {
     return (
         <NavigationContainer>
-            <Navigator.Navigator initialRouteName="DrawerMenu"
+            <Navigator.Navigator initialRouteName="Splash"
                 screenOptions={{
                     headerStyle: { backgroundColor: 'black' },
                     headerTitleAlign: 'center',

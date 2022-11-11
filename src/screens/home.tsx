@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text } from 'react-native';
+import { ActivityIndicator, Text } from 'react-native';
 import { ScreenDimensions } from '../components';
 import { MovieList } from '../lists';
 import { getPopularMovies } from '../util';
@@ -12,15 +12,23 @@ const Home: React.FC<Props> = ({ navigation }) => {
 
     useEffect(() => {
         getPopularMovies().then(movies => {
-            setPopularMovies(movies.results);
+            setPopularMovies([]);
         }).catch(e => console.log(e));
     }, []);
 
-    return (
-        <ScreenDimensions>
-            <Text style={{ color: 'white', marginVertical: 10, fontWeight: 'bold', fontSize: 21, }}>Available Movies</Text>
-            <MovieList navigation={navigation} movies={popularMovies} />
-        </ScreenDimensions>
-    );
+    if (popularMovies.length > 0) {
+        return (
+            <ScreenDimensions>
+                <Text style={{ color: 'white', marginVertical: 10, fontWeight: 'bold', fontSize: 21, }}>Popular Movies</Text>
+                <MovieList navigation={navigation} movies={popularMovies} />
+            </ScreenDimensions>
+        );
+    }
+
+    if (popularMovies.length === 0) {
+        return (<Text style={{ color: 'white' }}>Nothing to show</Text>);
+    }
+
+    return <ActivityIndicator />
 }
 export default Home;

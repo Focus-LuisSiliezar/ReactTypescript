@@ -1,8 +1,6 @@
 import React from 'react';
-import LottieView from 'lottie-react-native'; // if you have "esModuleInterop": true
-import { StackActions, useFocusEffect, useNavigation } from '@react-navigation/native';
-// import LottieView = require('lottie-react-native'); // otherwise you have "esModuleInterop": false
-
+import LottieView from 'lottie-react-native';
+import { StackActions, useNavigation } from '@react-navigation/native';
 
 const Splash: React.FC = () => {
   const navigation = useNavigation();
@@ -10,8 +8,8 @@ const Splash: React.FC = () => {
     navigation.dispatch(
       StackActions.replace('DrawerMenu')
     );
-    console.log('Time is up');
   }
+
   setTimeout(() => {
     SplashScreenDelay();
   }, 4400);

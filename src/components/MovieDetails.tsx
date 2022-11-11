@@ -5,20 +5,21 @@ interface Props {
     movie: any,
 }
 const MovieDetails: React.FC<Props> = ({ movie }) => {
+    console.log(movie.poster_path);
     return (
         <View>
             <Image
                 style={style.image}
                 source={
-                    movie.movieLink ? { uri: movie.movieLink }
+                    movie.poster_path ? { uri:  `https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}` }
                         : require('../../assets/placeholder_image.png')
                 }
             />
             <View style={style.infoRow}>
-                <Text style={style.textColor}>{movie.title}</Text>
+                <Text style={style.textColor}>{movie.original_title}</Text>
                 <View style={style.ratingRow}>
                     <Text style={style.textColor}>Average Rating: </Text>
-                    <Text style={style.textColor}>{movie.average}</Text>
+                    <Text style={style.textColor}>{movie.vote_average}</Text>
                 </View>
 
             </View>

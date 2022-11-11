@@ -8,6 +8,6 @@ export const getPopularMovies = async () => {
     // try {
       
     // } catch (error) {
-    //     console.log(error);r
+    //     console.log(error);
     // }
 }
