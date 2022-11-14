@@ -23,12 +23,14 @@ const Home: React.FC<Props> = ({ navigation }) => {
                 <MovieList navigation={navigation} movies={popularMovies} />
             </ScreenDimensions>
         );
+    } else {
+        return <ActivityIndicator size={'large'} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} color='white' />
+
     }
 
-    if (popularMovies.length === 0) {
-        return (<Text style={{ color: 'white' }}>Nothing to show</Text>);
-    }
+    // if (popularMovies.length == 0) {
+    //     return (<Text style={{ color: 'white' }}>Nothing to show</Text>);
+    // }
 
-    return <ActivityIndicator />
 }
 export default Home;

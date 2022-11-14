@@ -5,7 +5,6 @@ interface Props {
     movie: any,
 }
 const MovieDetails: React.FC<Props> = ({ movie }) => {
-    console.log(movie.poster_path);
     return (
         <View>
             <Image
