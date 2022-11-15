@@ -1,6 +1,6 @@
 import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
-import { Text, ScrollView } from "react-native";
+import { View,Text, ScrollView } from "react-native";
 import { ScreenDimensions, MovieDetails, IconButton } from "../components";
 import { RelatedMovieList } from "../lists";
 

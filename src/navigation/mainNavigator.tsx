@@ -2,7 +2,7 @@ import React from "react";
 import { DrawerActions, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Details, Favorites, Home, Search, Splash } from "../screens";
+import { Details, Favorites, Home, Search, Splash, WatchLater } from "../screens";
 import { HeaderImage, IconButton } from "../components";
 import Icon from 'react-native-remix-icon';
 
@@ -35,6 +35,10 @@ const DrawerMenu: React.FC<Props> = ({ navigation }) => {
             <Drawer.Screen name='Favorites' component={Favorites} options={{
                 title: 'Favorites',
                 drawerIcon: ({ color }) => <Icon name="ri-star-line" size='18' color={color} />
+            }} />
+            <Drawer.Screen name='WatchLater' component={WatchLater} options={{
+                title: 'Watch Later',
+                drawerIcon: ({ color }) => <Icon name="ri-time-line" size='18' color={color} />
             }} />
 
         </Drawer.Navigator>

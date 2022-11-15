@@ -24,8 +24,8 @@ const RelatedMovieItem: React.FC<Props> = ({ onPress, poster_path }) => {
 export default RelatedMovieItem;
 const style = StyleSheet.create({
     cardContainer: {
-        width: 150,
-        height: 230,
+        width: 170,
+        height: 250,
         backgroundColor: 'black',
         borderRadius: 6,
         overflow: "hidden",

@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import config from '../config/enviroment.json'
 export const getPopularMovies = async () => {
@@ -20,4 +21,16 @@ export const getRelatedMovies = async (movie_id: number) => {
     } catch (error) {
         console.log(error);
     }
+}
+
+// export const saveFavMovies = async (movie: any) => {
+//     let favMovies =[];
+//     try {
+//         await AsyncStorage.setItem('movieList', favMovies.push(movie));
+//     } catch (e) {
+//         // 
+//     }
+// }
+export const getFavMoviesList = async () => {
+
 }
