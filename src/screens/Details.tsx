@@ -27,11 +27,8 @@ const Details: React.FC<Props> = ({ navigation, route }) => {
     function isMovieAdded() {
         const exists = movies.findIndex((e: any) => e.id == movie.id);
         console.log(exists);
-        if (exists != -1) {
-            setIsAdded(true);
-        } else {
-            setIsAdded(false);
-        }
+        exists != -1 ? setIsAdded(true) : setIsAdded(false);
+
     }
 
     function addToList() {
