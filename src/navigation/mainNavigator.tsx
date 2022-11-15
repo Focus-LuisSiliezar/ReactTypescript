@@ -8,6 +8,7 @@ import Icon from 'react-native-remix-icon';
 
 const Navigator = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
+
 interface Props {
     navigation: any;
 }
@@ -25,8 +26,7 @@ const DrawerMenu: React.FC<Props> = ({ navigation }) => {
                 drawerActiveTintColor: 'white',
                 drawerActiveBackgroundColor: '#831010',
                 headerLeft: () => <IconButton iconName="ri-menu-line" onPress={() => { navigation.dispatch(DrawerActions.toggleDrawer()) }} iconColor="white" iconStyle={{ paddingLeft: 15 }} />,
-            }}
-        >
+            }}>
             <Drawer.Screen name="Home" component={Home} options={{
                 headerTitle: () => <HeaderImage />,
                 headerRight: () => <IconButton iconName="ri-search-line" onPress={() => { navigation.navigate('Search') }} iconColor="white" iconStyle={{ paddingRight: 15 }} />,

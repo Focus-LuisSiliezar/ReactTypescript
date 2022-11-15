@@ -9,7 +9,6 @@ interface Props {
 
 const WatchLater: React.FC<Props> = ({ navigation }) => {
     const movies: any = movieStore((state: any) => state.movies);
-    const removeMovie: any = movieStore((state: any) => state.removeMovie);
 
 
     return (
