@@ -8,7 +8,7 @@ interface Props {
     navigation: any,
 }
 const Home: React.FC<Props> = ({ navigation }) => {
-    const [popularMovies, setPopularMovies] = useState<any[]>([]);
+    const [popularMovies, setPopularMovies] = useState<any>([]);
 
     useEffect(() => {
         getPopularMovies().then(movies => {
@@ -25,7 +25,6 @@ const Home: React.FC<Props> = ({ navigation }) => {
         );
     } else {
         return <ActivityIndicator size={'large'} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} color='white' />
-
     }
 
     // if (popularMovies.length == 0) {

@@ -12,6 +12,7 @@ const Drawer = createDrawerNavigator();
 interface Props {
     navigation: any;
 }
+
 const DrawerMenu: React.FC<Props> = ({ navigation }) => {
     return (
         <Drawer.Navigator
@@ -40,7 +41,6 @@ const DrawerMenu: React.FC<Props> = ({ navigation }) => {
                 title: 'Watch Later',
                 drawerIcon: ({ color }) => <Icon name="ri-time-line" size='18' color={color} />
             }} />
-
         </Drawer.Navigator>
     );
 }
